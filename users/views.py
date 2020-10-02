@@ -1,4 +1,4 @@
-#line 11
+
 from django.shortcuts import render,redirect
 from django.contrib import messages
 from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
@@ -7,8 +7,7 @@ from django.contrib.auth.decorators import login_required
 def register(request):
     if request.method == 'POST':
         form=UserRegisterForm(request.POST)
-        # make it "if form.is_valid():"
-        if :
+        if form.is_valid():
             form.save()
             username=form.cleaned_data.get('username')
             messages.success(request, f'Your Account has been created now you can login!')
