@@ -1,10 +1,12 @@
+#line 9
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from .models import Profile
 
 class UserRegisterForm(UserCreationForm):
-    email = forms.EmailField()
+    # set email equal to 'forms.EmailField()'
+    email = Pass
 
     class Meta:
         model = User
